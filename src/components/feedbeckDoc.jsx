@@ -24,7 +24,7 @@ export class Feedback extends Component {
 
     render() {
         return <div>
-            <h1>Please leave feedback</h1>
+            <h1>Please leave feedback goooooooooooooooooooo</h1>
             <ButtonList state={this.props} func={this.handl}/>
             <h2>Statistics</h2>
             {Object.values(this.state).some((value) =>  value !== 0 )&&<div>
