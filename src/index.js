@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
+// import { ButtonList } from "./components/buttoon-list.jsx";
+import element from "./component.json"
+import {Feedback} from "./components/feedbeckDoc"
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+   <Feedback state={element}></Feedback>
+    {/* <ButtonList state={element}/> */}
   </React.StrictMode>
 );

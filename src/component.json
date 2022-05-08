@@ -1,0 +1,14 @@
+[
+    {
+        "name":"good",
+        "step":"1"
+    },
+    {
+        "name":"neutral",
+        "step":"1"
+    },
+    {
+        "name":"bad",
+        "step":"1"
+    }
+]
