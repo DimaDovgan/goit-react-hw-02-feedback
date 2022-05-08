@@ -15,7 +15,7 @@ export class Feedback extends Component {
     handl = (event) => {
         
         let name = event.target.name;
-        this.setState((state, props) => (state[name]+=0.5));
+        this.setState((state, props) => (state[name]+=1));
         // this.setState((state, props) => ({state[name]:state[name]+1}));
         console.log("add")
         console.log(this.state)
