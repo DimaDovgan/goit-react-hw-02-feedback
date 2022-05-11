@@ -3,7 +3,6 @@ import { StatisyicList } from "./statistic-list"
 import { ButtonList } from "./buttoon-list";
 import { Notification } from "./Notification"
 import { Section } from "./sectionTitle"
-import PropTypes from "prop-types";
 export class Feedback extends Component { 
     
     state = {
@@ -41,7 +40,4 @@ export class Feedback extends Component {
         </div>
         
     }
-}
-Feedback.propTypes = {
-    state: PropTypes.arrayOf(PropTypes.object)
 }
