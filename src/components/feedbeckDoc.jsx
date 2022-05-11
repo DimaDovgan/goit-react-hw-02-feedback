@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { StatisyicList } from "./statistic-list"
-import { ButtonList } from "./buttoon-list";
+import { Statistics } from "./statistic-list"
+import { FeedbackOptions } from "./buttoon-list";
 import { Notification } from "./Notification"
 import { Section } from "./sectionTitle"
 export class Feedback extends Component { 
@@ -24,17 +24,17 @@ export class Feedback extends Component {
         }, 0)
     }
     countPositiveFeedbackPercentage = () => {
-        return ((this.state.good/this.countTotalFeedback())*100)
+        return (Math.round((this.state.good/this.countTotalFeedback())*100))
     }
 
     render() {
         return <div>
             <Section title="Please leave feedback">
-            <ButtonList options={this.props} onLeaveFeedback={this.handl} />
+            <FeedbackOptions options={this.props} onLeaveFeedback={this.handl} />
             </Section>
             <Section title="Statistic">
             {Object.values(this.state).some((value) => value !== 0) ?
-                <StatisyicList good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />
+                <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />
                 : <Notification message="There is no feedback" />}
             </Section>
         </div>
