@@ -30,7 +30,7 @@ export class Feedback extends Component {
     render() {
         return <div>
             <Section title="Please leave feedback">
-            <FeedbackOptions options={this.props} onLeaveFeedback={this.handl} />
+            <FeedbackOptions options={this.state} onLeaveFeedback={this.handl} />
             </Section>
             <Section title="Statistic">
             {Object.values(this.state).some((value) => value !== 0) ?
